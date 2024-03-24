@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div id="back-photo" style="background-image: url(/static/porcini.jpg);background-position-x: right;
+    background-repeat: no-repeat; background-size: cover; height: 100%; width:65%; position:absolute; right:0; min-height: 100vh">
+  </div>
+  <div id="main-content" style="height:auto; width:35%; position: absolute; background-color:#D49A61; overflow: auto;
+    padding-right:16px" class="sc-padding-vertical sc-padding">
+    {% block func_content %}
+    {% endblock %}
+  </div>
+{% endblock %}

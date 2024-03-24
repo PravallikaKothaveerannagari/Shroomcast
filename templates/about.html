@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="background-color:#D49A61" class="sc-padding-vertical sc-padding">
+    <h1 style="color: #3b1e00">About</h1>
+    <p>My father-in-law to be is a passionate mushroom picker. This app is based on the insights he gathers before going out to pick
+    various types of mushrooms.</p>
+    <p>I hope it will prove useful to you too.</p>
+
+    <h2>How to use the app</h2>
+    <p>To use Shroomcast you will need Visual Crossing account (Shroomcast uses this weather API to gather information).
+    If you don't have an account yet, you can create one here:
+        <br>
+        <a href="https://www.visualcrossing.com/" target="_blank" class="scs-link">https://www.visualcrossing.com/</a>
+    </p>
+    <h3>Sections of the app</h3>
+    <p>The Shroomcast contains of 4 sections:</p>
+    <ol>
+    <li>authorization</li>
+    <li>forecast</li>
+    <li>query count check</li>
+    <li>about</li>
+    </ol>
+
+    <p>I will describe some them in more detail in the following sections</p>
+
+    <h3>Authorization</h3>
+    <p>In this section you put yout Visual Crossing authorization key. You can find it in your Visual Crossing Account:
+        <br>
+        <a href="https://www.visualcrossing.com/account" target="_blank" class="scs-link">https://www.visualcrossing.com/account</a>
+    </p>
+
+    <h3>Forecast</h3>
+    <p>The main view of this app. After providing valid Visual Crossing key in
+    <a href="{% url 'authorization' %}" class="scs-link">authorization section</a>, you can put the municipality in the forecast view
+    and choose the date to get weather data useful to predict if you find mushrooms in the areas they could grow.</p>
+
+    <h3>Query</h3>
+    <p>Visual Crossing has several pricing plans. One of them is free, but in it you can spend 50 query points and after that you won't
+    be able to send any more queries during this day. This section gathers the data about the query you spent using the app during the day
+    for you to see how many query points you have left.
+    </p>
+
+    <h2>And that's all</h2>
+    Happy weather shroomcasting!
+</div>
+
+{% endblock %}

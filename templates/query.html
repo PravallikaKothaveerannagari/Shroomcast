@@ -1,0 +1,17 @@
+{% extends "base_func.html" %}
+
+{% block func_content %}
+
+{% if queryCount %}
+    <h1 style="font-size: 25px">Query points you spent today:</h1>
+    {{queryCount}} / 1000
+{% else %}
+    <h1 style="font-size: 25px; color: #3b1e00">No queries have been made yet</h1>
+    <p>Please, refer to About section for instructions:
+        <br>
+        <a href="{% url 'about' %}" class="scs-link">Go to About section</a>
+    </p>
+{% endif %}
+
+
+{% endblock %}

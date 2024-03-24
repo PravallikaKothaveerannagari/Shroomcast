@@ -1,0 +1,15 @@
+{% extends "base_func.html" %}
+
+{% block func_content %}
+
+{% if message %}
+<div class="alert alert-danger">{{message}}</div>
+{% endif %} 
+
+<form method="post" class="sc-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" class="submit-btn">
+</form>
+
+{% endblock %}

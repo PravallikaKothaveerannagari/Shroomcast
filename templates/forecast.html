@@ -1,0 +1,53 @@
+{% extends "base_func.html" %}
+
+{% block func_content %}
+{% if message %}
+<div class="alert alert-danger">{{message}}</div>
+{% endif %} 
+<form method="post" class="sc-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" class="submit-btn">
+</form>
+{% if temperatureMin %}
+<hr>
+<table>
+    <tr>
+        <th>Minimal temperature:&nbsp;&nbsp;</th>
+        <td>{{temperatureMin}}</td>
+    </tr>
+    <tr>
+        <th>Maximal temperature:&nbsp;&nbsp;</th>
+        <td>{{temperatureMax}}</td>
+    </tr>
+    <tr>
+        <th>Precipitation:&nbsp;&nbsp;</th>
+        <td>{{precipitation}}</td>
+    </tr>
+    <tr>
+        <th>Wind speed:&nbsp;&nbsp;</th>
+        <td>{{windSpeed}}</td>
+    </tr>
+    <tr>
+        <th>Wind direction:&nbsp;&nbsp;</th>
+        <td>{{windDirection}}</td>
+    </tr>
+    <tr>
+        <th>Cloud cover:&nbsp;&nbsp;</th>
+        <td>{{cloudCover}}</td>
+    </tr>
+</table>
+{% endif %} 
+
+<script>
+    const selectField = document.getElementById("id_date");
+    const options = selectField.getElementsByTagName("option");
+    for (option of options) {
+        console.log("the option is now", option)
+        option.style.backgroundColor = "#fff3e0";
+        option.style.color = "#3b1e00";
+    }
+    
+</script>
+
+{% endblock %}

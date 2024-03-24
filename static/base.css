@@ -1,0 +1,78 @@
+html {
+    background-color: #23460d
+}
+
+.sc-padding {
+    padding-left: 16px;
+}
+
+.sc-padding-vertical{
+    padding-top: 16px;
+    padding-bottom: 24px;
+}
+
+.sc-link, .sc-link:link {
+    color: #fff3e0;
+    text-decoration: none;
+    padding: 10px 8px;
+}
+
+.sc-link:active, .sc-link:hover {
+    color: #ffebce;
+}
+
+.scs-link, .scs-link:link {
+    color: #23460d;
+}
+
+.scs-link:active, .scs-link:hover {
+    color: #633200;
+}
+
+.sc-form {
+    font-weight: 600;
+}
+
+.submit-btn {
+    border: 2px solid;
+    border-color: #763B00;
+    border-radius: 3px;
+    color: #3b1e00;
+    background-color: transparent;
+    padding: 4px;
+    padding-left:17px;
+    padding-right:17px;
+}
+
+.sc-input {
+    border: 1px solid #3b1e00;
+    border-radius:3px;
+    background-color: #fff3e0
+}
+
+.sc-input:focus {
+    outline: none !important;
+    outline-color: transparent !important;
+}
+
+
+/* MEDIA RULES */
+@media (max-width: 500px) {
+    #back-photo {
+        display: none !important;
+    }
+    #main-content {
+        width: 100% !important;
+    }
+    #menu {
+        height: auto;
+        display: flex;
+        font-size: 14px;
+    }
+    .divider {
+        display: none;
+    }
+    .sc-padding {
+        padding-left: 7px;
+    }
+}
